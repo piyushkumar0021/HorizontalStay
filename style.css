@@ -1,0 +1,229 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:rgb(20, 20, 20);
+}
+
+nav{
+    width:100%;
+    height:80px;
+    background:black;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 40px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo i{
+    color:red;
+    font-size:35px;
+}
+
+.logo h2{
+    color:red;
+    font-size:30px;
+}
+
+ul{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+}
+
+ul li a:hover{
+    color:rgb(77, 211, 235);
+}
+
+.search{
+    display:flex;
+}
+
+.search input{
+    width:220px;
+    height:40px;
+    padding:10px;
+    border:none;
+    outline:none;
+    border-radius:20px 0 0 20px;
+}
+
+.search button{
+    width:45px;
+    border:none;
+    background:red;
+    color:white;
+    border-radius:0 20px 20px 0;
+    cursor:pointer;
+}
+
+.login{
+    padding:10px 20px;
+    border:none;
+    background:red;
+    color:rgb(0, 0, 0);
+    border-radius:20px;
+    cursor:pointer;
+}
+
+ul{
+    padding-top: 12px;
+    padding-left: 15px;
+    display: flex;
+    gap:35px;
+}
+table{
+    padding-top: 12px;
+    padding-left:15px;
+    display: flex;
+    border-radius: 20px;
+}
+
+.img img{
+    width: 300px;
+    display: block;
+    border-radius: 20px;
+    transition: all 0.4s ease;
+    padding-left: 12px;
+    padding: 15px;
+}
+
+.img img:hover{
+    transform:scale(3.706);
+}
+.img{
+    overflow: hidden;
+    border-radius: 20px;
+}
+.img img:hover{
+    transform: scale(1.2);
+    filter: brightness(70%);
+}
+
+h3{
+    color: azure;
+    padding-left: 16px;
+}
+
+h6{
+    color: aliceblue;
+    padding-bottom: 5px;
+    padding-left: 16px;
+    padding-top: 1.0;
+}
+
+h4{
+    color: aliceblue;
+    padding-bottom: 5px;
+    padding-left: 16px;
+    padding-top: 1.0;
+}
+
+h4{
+    font-size: 20px;   /* 3500 bada */
+    font-weight: 100;
+}
+
+h4 span{
+    font-size: 16px;   /* night chhota */
+    font-weight: 400;
+    color:aliceblue;
+}
+
+
+h3:hover{
+    color:rgb(42, 204, 245);
+}
+h4:hover{
+    color: rgb(42, 204, 245);
+}
+h6:hover{
+    color: rgb(42, 204, 245);
+}
+span:hover{
+    color: rgb(42, 204, 245);
+}
+
+
+.footer{
+    background:#f8f8f8;
+    padding:25px 0;
+    text-align:center;
+    border-top:1px solid #ddd;
+}
+
+.social-icons{
+    margin-bottom:12px;
+}
+
+.social-icons a{
+    color:#333;
+    font-size:22px;
+    margin:0 10px;
+    transition:0.3s;
+}
+
+.social-icons a:hover{
+    color:#ff385c;
+}
+
+.copyright{
+    font-size:15px;
+    color:#444;
+    margin:10px 0;
+}
+
+.footer-links{
+    margin-top:10px;
+}
+
+.footer-links a{
+    color:#555;
+    text-decoration:none;
+    margin:0 15px;
+    font-size:14px;
+}
+
+.footer-links a:hover{
+    color:#ff385c;
+}
+
+/* =================================
+   NAVBAR USER (Logged-in state)
+   Existing .login pill style reuse,
+   naam navbar text jaisa white.
+================================= */
+
+.user-auth{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.user-name{
+    color:white;
+    font-size:16px;
+    font-weight:600;
+}
+
+.login.logout-btn{
+    display:inline-block;
+    text-decoration:none;
+}
+

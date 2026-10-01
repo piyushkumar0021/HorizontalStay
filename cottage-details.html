@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> villa | Travellnest</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #111;
+            color: white;
+        }
+
+        .navbar{
+            height: 65px;
+            background: #555;
+            display: flex;
+            align-items : center;
+            padding: 0 50px;
+        }
+
+        .logo{
+            color: #21d9ed;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .nav-links{
+            display: flex;
+            gap: 35px;
+            margin-left: 145px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .search{
+            margin-left: auto;
+            width: 265px;
+            height: 40px;
+            border-radius: 25px;
+            border: none;
+            padding: 0 20px;
+            font-size: 14px;
+        }
+
+        .login {
+            margin-left: 135px;
+            background: #2ed6e8;
+            color: #111;
+            border: none;
+            padding: 10px 25px;
+            cursor: pointer;
+        }
+
+        .details-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+
+        .back-btn {
+            display: inline-block;
+            color: #2ed6e8;
+            text-decoration: none;
+            font-size: 17px;
+            margin-bottom: 25px;
+        }
+
+        .details-box {
+            background: #1c1c1c;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.4);
+        }
+
+        .main-image {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .content h1 {
+            font-size: 34px;
+            margin-bottom: 8px;
+        }
+
+        .location {
+            color: #2ed6e8;
+            font-size: 17px;
+            margin-bottom: 20px;
+        }
+
+        .price {
+            font-size: 25px;
+            margin-bottom: 25px;
+        }
+
+        .price span {
+            font-size: 15px;
+            color: #bbb;
+        }
+
+        .description {
+            color: #ddd;
+            line-height: 1.7;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        /* Information cards */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .info-card {
+            background: #292929;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .info-card h3 {
+            color: #2ed6e8;
+            margin-bottom: 8px;
+        }
+
+        .info-card p {
+            color: #ddd;
+        }
+
+        /* Amenities */
+        .amenities {
+            margin-top: 20px;
+        }
+
+        .amenities h2 {
+            margin-bottom: 15px;
+        }
+
+        .amenities-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .amenity {
+            background: #292929;
+            padding: 12px 18px;
+            border-radius: 20px;
+            color: #ddd;
+        }
+
+        /* Booking */
+        .booking-section {
+            margin-top: 30px;
+            padding: 25px;
+            background: #292929;
+            border-radius: 12px;
+        }
+
+        .booking-section h2 {
+            margin-bottom: 15px;
+        }
+
+        .book-btn {
+            margin-top: 15px;
+            background: #2ed6e8;
+            color: #111;
+            border: none;
+            padding: 13px 30px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .book-btn:hover {
+            background: #16bdd0;
+        }
+
+        /* Responsive */
+        @media (max-width: 800px) {
+
+            .navbar {
+                padding: 0 20px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .search {
+                display: none;
+            }
+
+            .login{
+                margin-left: auto;
+            }
+
+            .info-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .main-image {
+                height: 300px;
+            }
+
+            .map-section {
+    margin-top: 30px;
+    padding: 25px;
+    background: #292929;
+    border-radius: 12px;
+}
+
+.map-section h2 {
+    margin-bottom: 8px;
+}
+
+.map-section p {
+    color: #bbb;
+    margin-bottom: 5px;
+}
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <div class="logo">
+            Travellnest
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#">Explore</a>
+            <a href="#">Rooms</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <input
+            type="text"S
+            class="search"
+            placeholder="Search..."
+        >
+
+        <button class="login">
+            Login
+        </button>
+
+    </nav>
+
+
+    <!-- Details -->
+    <div class="details-container">
+
+        <a href="index.html" class="back-btn">
+            ← Back to Explore
+        </a>
+
+        <div class="details-box">
+
+            <!-- Main Image -->
+            <img
+                src="istockphoto-104731717-612x612.jpg"
+                alt="Cozy Cottage in the Hills"
+                class="main-image"
+            >
+
+            <div class="content">
+
+                <h1>Cozy Cottage in the Hills</h1>
+
+                <p class="location">
+                    📍 Manali, Himachal Pradesh, India
+                </p>
+
+                <p class="price">
+                    ₹ 3,500 <span>/night</span>
+                </p>
+
+
+                <!-- Description -->
+
+                <p class="description">
+                    Welcome to Cozy Cottage in the Hills, a peaceful and
+                    beautiful stay located in the scenic mountains of Manali.
+                    Surrounded by green valleys, snow-covered mountains and
+                    fresh mountain air, this cottage is perfect for families,
+                    couples and travellers looking for a relaxing getaway.
+                </p>
+
+
+                <!-- Basic Information -->
+
+                <div class="info-grid">
+
+                    <div class="info-card">
+                        <h3>👥 Guests</h3>
+                        <p>4 Guests</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>🛏 Rooms</h3>
+                        <p>2 Bedrooms</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>🛁 Bathroom</h3>
+                        <p>2 Bathrooms</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>⭐ Rating</h3>
+                        <p>4.8 / 5</p>
+                    </div>
+
+                </div>
+
+
+                <!-- Amenities -->
+
+                <div class="amenities">
+
+                    <h2>Amenities</h2>
+
+                    <div class="amenities-list">
+
+                        <div class="amenity">
+                            📶 Free Wi-Fi
+                        </div>
+
+                        <div class="amenity">
+                            🅿️ Free Parking
+                        </div>
+
+                        <div class="amenity">
+                            🔥 Fireplace
+                        </div>
+
+                        <div class="amenity">
+                            🏔 Mountain View
+                        </div>
+
+                        <div class="amenity">
+                            🍳 Kitchen
+                        </div>
+
+                        <div class="amenity">
+                            🌡 Heating
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Booking -->
+
+                <div class="booking-section">
+
+                    <h2>Ready for your trip?</h2>
+
+                    <p>
+                        Book this beautiful cottage and enjoy a peaceful
+                        stay in the mountains of Manali.
+                    </p>
+
+                    <button class="book-btn">
+                        Book Now
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Location Map -->
+
+<div class="map-section">
+
+    <h2>📍 Location</h2>
+
+    <p>Cozy Cottage in the Hills, Manali, Himachal Pradesh</p>
+
+    <iframe
+        src="https://www.google.com/maps?q=Manali,Himachal+Pradesh,India&output=embed"
+        width="100%"
+        height="400"
+        style="border:0; border-radius:12px; margin-top:15px;"
+        allowfullscreen=""
+        loading="lazy">
+    </iframe>
+
+</div>
+
+</body>
+</html>
